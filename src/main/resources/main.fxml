@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="ru.zavoyko.fmanager.Controller">
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem text="Exit" onAction="#btnExitAction"/>
+        </Menu>
+    </MenuBar>
+    <HBox VBox.vgrow="ALWAYS">
+        <fx:include fx:id="leftPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+        <fx:include fx:id="rightPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="5">
+        <Button focusTraversable="false" maxWidth="Infinity" HBox.hgrow="ALWAYS" text="Copy" onAction="#btnCopyAction"/>
+        <Button focusTraversable="false" maxWidth="Infinity" HBox.hgrow="ALWAYS" text="Move" onAction="#btnMoveAction"/>
+        <Button focusTraversable="false" maxWidth="Infinity" HBox.hgrow="ALWAYS" text="Del" onAction="#btnDelAction"/>
+        <Button focusTraversable="false" maxWidth="Infinity" HBox.hgrow="ALWAYS" text="Exit" onAction="#btnExitAction"/>
+        <padding>
+            <Insets bottom="5" left="5" top="5"/>
+        </padding>
+    </HBox>
+ </VBox>
